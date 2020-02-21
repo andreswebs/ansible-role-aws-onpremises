@@ -24,7 +24,7 @@
           },
           {
             "file_path": "/var/log/monit.log",
-            "log_group_name": "access.log",
+            "log_group_name": "monit.log",
             "log_stream_name": "{hostname}"
           },
           {
