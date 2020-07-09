@@ -3,7 +3,7 @@
   get_url:
     url: "https://s3.amazonaws.com/amazoncloudwatch-agent/ubuntu/amd64/latest/{{ aws_onpremises_cloudwatch_agent_file }}"
     dest: /root
-    mode: '0666'
+    mode: "0666"
   tags:
     - aws_cloudwatch
 
@@ -42,11 +42,10 @@
   copy:
     src: files/aws_cloudwatch_config.json
     dest: /opt/aws/amazon-cloudwatch-agent/bin/config.json
-  notify: 
+  notify:
     - Restart CloudWatch Agent
   tags:
     - aws_cloudwatch
-
 
 # Check if CloudWatch agent is running
 - name: Check CloudWatch agent
