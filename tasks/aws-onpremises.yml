@@ -27,7 +27,7 @@
     owner: "{{ aws_onpremises_system_username }}"
     group: "{{ aws_onpremises_system_username }}"
     mode: '0600'
-    src: aws_credentials.j2
+    src: aws-credentials.j2
     dest: "{{ ansible_env.HOME }}/.aws/credentials"
   tags:
     - aws_onpremises
@@ -39,7 +39,7 @@
     owner: "{{ aws_onpremises_system_username }}"
     group: "{{ aws_onpremises_system_username }}"
     mode: '0600'
-    src: aws_config.j2
+    src: aws-config.j2
     dest: "{{ ansible_env.HOME }}/.aws/config"
   tags:
     - aws_onpremises
